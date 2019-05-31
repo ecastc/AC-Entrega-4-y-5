@@ -1,0 +1,2886 @@
+TITLE Macro Examples - 1            (Macro1.ASM)
+
+;Juan david guzman
+;juan pablo cabrera
+;carlos 
+;Einer Alean
+
+INCLUDE Irvine32.inc
+INCLUDE macros.inc
+
+mWriteAt MACRO X,Y,literal
+	mGotoxy X,Y
+	mWrite literal
+ENDM
+
+
+.data
+valX BYTE 2
+valY BYTE 2
+colorImpar BYTE 0
+colorPar BYTE 1
+countX BYTE 0
+countY BYTE 0
+fila BYTE 1
+paridad BYTE 0
+
+.code
+main PROC
+
+	mov ecx,8
+
+	L1:
+		cmp paridad,0
+		je	CreaPrimeraFilaL1
+		jmp CreaSegundaFilaL1
+
+	CreaPrimeraFilaL1:
+		call LineToLineBlue
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L1
+
+	CreaSegundaFilaL1:
+		call LineToLineBlue
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L1
+
+
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L2:
+		cmp paridad,0
+		je	CreaPrimeraFilaL2
+		jmp CreaSegundaFilaL2
+
+	CreaPrimeraFilaL2:
+		call LineToLineGreen
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L2
+
+	CreaSegundaFilaL2:
+		call LineToLineGreen
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L2
+	
+
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L3:
+		cmp paridad,0
+		je	CreaPrimeraFilaL3
+		jmp CreaSegundaFilaL3
+
+	CreaPrimeraFilaL3:
+		call LineToLineCyan
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L3
+
+	CreaSegundaFilaL3:
+		call LineToLineCyan
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L3
+	
+
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L4:
+		cmp paridad,0
+		je	CreaPrimeraFilaL4
+		jmp CreaSegundaFilaL4
+
+	CreaPrimeraFilaL4:
+		call LineToLineRed
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L4
+
+	CreaSegundaFilaL4:
+		call LineToLineRed
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L4
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L5:
+		cmp paridad,0
+		je	CreaPrimeraFilaL5
+		jmp CreaSegundaFilaL5
+
+	CreaPrimeraFilaL5:
+		call LineToLineMagenta
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L5
+
+	CreaSegundaFilaL5:
+		call LineToLineMagenta
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L5
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L6:
+		cmp paridad,0
+		je	CreaPrimeraFilaL6
+		jmp CreaSegundaFilaL6
+
+	CreaPrimeraFilaL6:
+		call LineToLineBrown
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L6
+
+	CreaSegundaFilaL6:
+		call LineToLineBrown
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L6
+
+
+				
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L7:
+		cmp paridad,0
+		je	CreaPrimeraFilaL7
+		jmp CreaSegundaFilaL7
+
+	CreaPrimeraFilaL7:
+		call LineToLineLightGray
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L7
+
+	CreaSegundaFilaL7:
+		call LineToLineLightGray
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L7
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L8:
+		cmp paridad,0
+		je	CreaPrimeraFilaL8
+		jmp CreaSegundaFilaL8
+
+	CreaPrimeraFilaL8:
+		call LineToLineGray
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L8
+
+	CreaSegundaFilaL8:
+		call LineToLineGray
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L8
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L9:
+		cmp paridad,0
+		je	CreaPrimeraFilaL9
+		jmp CreaSegundaFilaL9
+
+	CreaPrimeraFilaL9:
+		call LineToLineLightBlue
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L9
+
+	CreaSegundaFilaL9:
+		call LineToLineLightBlue
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L9
+
+			
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L10:
+		cmp paridad,0
+		je	CreaPrimeraFilaL10
+		jmp CreaSegundaFilaL10
+
+	CreaPrimeraFilaL10:
+		call LineToLineLightGreen
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L10
+
+	CreaSegundaFilaL10:
+		call LineToLineLightGreen
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L10
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L11:
+		cmp paridad,0
+		je	CreaPrimeraFilaL11
+		jmp CreaSegundaFilaL11
+
+	CreaPrimeraFilaL11:
+		call LineToLineLightCyan
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L11
+
+	CreaSegundaFilaL11:
+		call LineToLineLightCyan
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L11
+
+			
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L12:
+		cmp paridad,0
+		je	CreaPrimeraFilaL12
+		jmp CreaSegundaFilaL12
+
+	CreaPrimeraFilaL12:
+		call LineToLineLightRed
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L12
+
+	CreaSegundaFilaL12:
+		call LineToLineLightRed
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L12
+
+		
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L13:
+		cmp paridad,0
+		je	CreaPrimeraFilaL13
+		jmp CreaSegundaFilaL13
+
+	CreaPrimeraFilaL13:
+		call LineToLineLightMagenta
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L13
+
+	CreaSegundaFilaL13:
+		call LineToLineLightMagenta
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L13
+
+			
+mov eax,500
+call Delay
+
+mov	eax,white + (Black * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L14:
+		cmp paridad,0
+		je	CreaPrimeraFilaL14
+		jmp CreaSegundaFilaL14
+
+	CreaPrimeraFilaL14:
+		call LineToLineYellow
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L14
+
+	CreaSegundaFilaL14:
+		call LineToLineYellow
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L14
+
+			
+mov eax,500
+call Delay
+
+mov	eax,Black + (Gray * 16)
+call	SetTextColor
+call Clrscr
+
+
+mov	valX,2
+mov	valY,2
+mov colorImpar,0
+mov	colorPar,1
+mov	countX,0
+mov	countY,0
+mov	fila,1
+mov paridad,0
+
+	mov ecx,8
+
+	L15:
+		cmp paridad,0
+		je	CreaPrimeraFilaL15
+		jmp CreaSegundaFilaL15
+
+	CreaPrimeraFilaL15:
+		call LineToLineBlack
+		mov paridad,1
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L15
+
+	CreaSegundaFilaL15:
+		call LineToLineBlack
+		mov paridad,0
+		add valY,2
+		mov valX,2
+		mov countX,0
+		mov countY,0
+		loop L15
+
+
+	call	Crlf
+	call	Crlf
+
+	mov	eax,white + (0 * 16)
+	call	SetTextColor
+
+	exit
+main ENDP
+
+LineToLineBlue PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Blue * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Blue * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineBlue ENDP
+
+
+LineToLineGreen PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Green * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Green * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineGreen ENDP
+
+
+LineToLineCyan PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Cyan * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Cyan * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineCyan ENDP
+
+
+LineToLineRed PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Red * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Red * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineRed ENDP
+
+
+LineToLineMagenta PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Magenta * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Magenta * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineMagenta ENDP
+
+
+LineToLineBrown PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Brown * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Brown * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineBrown ENDP
+
+
+LineToLineLightGray PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (lightGray * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightGray * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightGray ENDP
+
+
+LineToLineGray PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Gray * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Gray * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineGray ENDP
+
+
+LineToLineLightBlue PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (lightBlue * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightBlue * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightBlue ENDP
+
+LineToLineLightGreen PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (lightGreen * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightGreen * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightGreen ENDP
+
+
+LineToLineLightCyan PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (LightCyan * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightCyan * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightCyan ENDP
+
+
+LineToLineLightRed PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (lightRed * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightRed * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightRed ENDP
+
+
+LineToLineLightMagenta PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (lightMagenta * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (lightMagenta * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineLightMagenta ENDP
+
+
+LineToLineYellow PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Yellow * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Yellow * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineYellow ENDP
+
+
+LineToLineBlack PROC
+
+	beginwhileX: 
+		cmp countX,8
+		je endwhileX
+		
+		cmp paridad,0
+		je	FilaImpar
+		jmp FilaPar
+
+
+FilaImpar:
+		
+		cmp colorImpar,0
+		je ColorWhiteImpar
+		jmp ColorBlueImpar
+
+		ColorWhiteImpar:
+			beginwhileYwhiteImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhiteImpar     ; repeat the loop 
+
+		ColorBlueImpar:
+			beginwhileYblueImpar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorImpar,0
+					mov	eax,white + (Black * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYblueImpar     ; repeat the loop 
+
+FilaPar:
+
+		cmp colorPar,0
+		je ColorWhitePar
+		jmp ColorBluePar
+
+		ColorWhitePar:
+			beginwhileYwhitePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,1
+					mov	eax,white + (White * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYwhitePar     ; repeat the loop 
+
+		ColorBluePar:
+			beginwhileYbluePar: 
+				cmp countY,2   
+				je endwhileY
+					mov colorPar,0
+					mov	eax,white + (Black * 16)
+					call	SetTextColor
+					mWriteAt valX,valY,"    "
+					call	Crlf
+					inc	  valY
+					inc	  countY
+				jmp beginwhileYbluePar     ; repeat the loop 
+
+
+		endwhileY:
+			cmp fila,8
+				jl FILA1
+				je FILA1
+					cmp fila,16
+					jl FILA2
+					je FILA2
+						cmp fila,24
+						jl FILA3
+						je FILA3
+							cmp fila,32
+							jl FILA4
+							je FILA4
+								cmp fila,40
+								jl FILA5
+								je FILA5
+									cmp fila,48
+									jl FILA6
+									je FILA6
+										cmp fila,56
+										jl FILA7
+										je FILA7
+										jg FILA8
+									
+			
+FILA1:	
+	mov valY,2
+	jmp L2
+
+FILA2:	 
+	mov valY,4
+	jmp L2
+
+FILA3:	 
+	mov valY,6
+	jmp L2
+
+FILA4:	 
+	mov valY,8
+	jmp L2
+
+FILA5:	 
+	mov valY,10
+	jmp L2
+
+FILA6:	 
+	mov valY,12
+	jmp L2
+
+FILA7:	 
+	mov valY,14
+	jmp L2
+
+FILA8:	 
+	mov valY,16
+	jmp L2
+
+
+			L2:
+
+			
+			mov countY,0
+			add valX,4
+			inc	countX
+			inc fila
+		jmp beginwhileX     ; repeat the loop 
+	endwhileX:
+
+	ret
+LineToLineBlack ENDP
+
+END main
